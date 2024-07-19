@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: x27pm6re0-dotnet-basic-gitops
+  description: This is GitOps manifest for x27pm6re0-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: x27pm6re0-dotnet-basic
+    janus-idp.io/tekton: x27pm6re0-dotnet-basic
+    backstage.io/kubernetes-id: x27pm6re0-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:x27pm6re0-dotnet-basic
